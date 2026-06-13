@@ -17,20 +17,19 @@ export default function AxisBar({ result, delay = 0 }: AxisBarProps) {
 
   const target = strengthA * 100
   const fill = mounted ? target : 0
-  // 끝에 붙는 손잡이가 잘리지 않도록 살짝 안쪽으로
   const thumbLeft = Math.min(95, Math.max(5, fill))
-
   const isA = strengthA >= 0.5
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-card">
-      <div className="mb-3 flex items-center gap-2">
-        <span className="text-lg">{axis.emoji}</span>
-        <span className="text-[15px] font-bold text-toss-ink">{axis.title}</span>
-        <span className="text-[10px] font-semibold uppercase tracking-wide text-toss-gray">
+      <div className="mb-3 flex items-baseline gap-2">
+        <span className="text-[16px] font-extrabold text-toss-ink">
+          {axis.title}
+        </span>
+        <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-toss-gray">
           {axis.english}
         </span>
-        <span className="ml-auto text-[13px] font-bold text-toss-blue tabular">
+        <span className="ml-auto text-[14px] font-extrabold text-toss-blue tabular">
           {balanced ? '균형' : `${percent}%`}
         </span>
       </div>
@@ -49,28 +48,54 @@ export default function AxisBar({ result, delay = 0 }: AxisBarProps) {
 
       {/* 양극 라벨 */}
       <div className="mt-2.5 flex items-center justify-between text-[12.5px]">
-        <span
-          className={
-            !isA
-              ? 'font-bold text-toss-ink'
-              : 'font-medium text-toss-gray'
-          }
-        >
-          {axis.poleB.letter} · {axis.poleB.name}
-        </span>
-        <span
-          className={
-            isA ? 'font-bold text-toss-ink' : 'font-medium text-toss-gray'
-          }
-        >
-          {axis.poleA.letter} · {axis.poleA.name}
-        </span>
+        <PoleLabel
+          letter={axis.poleB.letter}
+          name={axis.poleB.name}
+          active={!isA}
+        />
+        <PoleLabel
+          letter={axis.poleA.letter}
+          name={axis.poleA.name}
+          active={isA}
+          alignRight
+        />
       </div>
 
-      <p className="mt-2 text-[12.5px] leading-snug text-toss-sub">
+      <p className="mt-2 text-[12.5px] font-medium leading-snug text-toss-sub">
         {balanced ? '두 성향이 비슷해요 — ' : ''}
         {pole.short}
       </p>
     </div>
+  )
+}
+
+function PoleLabel({
+  letter,
+  name,
+  active,
+  alignRight,
+}: {
+  letter: string
+  name: string
+  active: boolean
+  alignRight?: boolean
+}) {
+  return (
+    <span
+      className={`flex items-center gap-1.5 ${alignRight ? 'flex-row-reverse' : ''}`}
+    >
+      <span
+        className={`flex h-5 w-5 items-center justify-center rounded-md text-[12px] font-extrabold ${
+          active ? 'bg-toss-blue text-white' : 'bg-toss-line text-toss-gray'
+        }`}
+      >
+        {letter}
+      </span>
+      <span
+        className={active ? 'font-bold text-toss-ink' : 'font-medium text-toss-gray'}
+      >
+        {name}
+      </span>
+    </span>
   )
 }

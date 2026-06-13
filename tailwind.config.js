@@ -3,6 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      // 폰 목업(프레임)을 띄울 최소 너비. 그 이하(실제 휴대폰)에서는 전체화면.
+      screens: {
+        device: '480px',
+      },
       colors: {
         // 토스 스타일 팔레트
         toss: {

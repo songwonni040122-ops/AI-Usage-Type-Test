@@ -45,9 +45,9 @@ export default function Quiz({ onComplete, onBack }: QuizProps) {
   }
 
   return (
-    <div className="flex min-h-[100dvh] flex-col">
+    <div className="flex min-h-0 flex-1 flex-col">
       {/* 상단: 뒤로가기 + 진행바 */}
-      <header className="safe-top mx-auto w-full max-w-app px-5 pt-3">
+      <header className="mx-auto w-full max-w-app shrink-0 px-5 pt-4">
         <div className="flex items-center gap-3">
           <button
             onClick={goPrev}
@@ -71,7 +71,7 @@ export default function Quiz({ onComplete, onBack }: QuizProps) {
       </header>
 
       {/* 문항 + 보기 */}
-      <main className="mx-auto flex w-full max-w-app flex-1 flex-col px-5 pb-8">
+      <main className="mx-auto flex w-full max-w-app min-h-0 flex-1 flex-col overflow-y-auto px-5 pb-8">
         <div key={index} className="flex flex-1 animate-fade-up flex-col">
           <div className="flex flex-1 flex-col justify-center py-8">
             <p className="text-[14px] font-semibold text-toss-blue tabular">

@@ -27,7 +27,6 @@ export interface Axis {
   title: string
   /** 영문 이름 */
   english: string
-  emoji: string
   /** 이 축이 답하는 핵심 질문 */
   coreQuestion: string
   /** 이 4D 차원이 무엇인지에 대한 설명 */
@@ -44,7 +43,6 @@ export const axes: Axis[] = [
     index: 0,
     title: '위임',
     english: 'Delegation',
-    emoji: '🎯',
     coreQuestion: '어디까지 AI에게 맡기나요?',
     description:
       '어떤 일을 AI에게 맡기고 무엇을 직접 할지 정하는 힘이에요. 나의 목표와 AI의 강점을 알고, 일을 똑똑하게 나누는 능력이죠.',
@@ -64,7 +62,6 @@ export const axes: Axis[] = [
     index: 1,
     title: '설명',
     english: 'Description',
-    emoji: '📝',
     coreQuestion: 'AI에게 어떻게 요청하나요?',
     description:
       '원하는 결과·방식·역할을 AI에게 명확히 전달하는 힘이에요. 좋은 프롬프트로 AI의 잠재력을 끌어내는 능력이죠.',
@@ -84,7 +81,6 @@ export const axes: Axis[] = [
     index: 2,
     title: '분별',
     english: 'Discernment',
-    emoji: '🔍',
     coreQuestion: 'AI의 결과를 어떻게 받아들이나요?',
     description:
       'AI의 결과와 과정을 비판적으로 살펴보는 힘이에요. 그럴듯한 오류를 가려내고 품질을 평가하는 능력이죠.',
@@ -104,7 +100,6 @@ export const axes: Axis[] = [
     index: 3,
     title: '책임',
     english: 'Diligence',
-    emoji: '🤝',
     coreQuestion: '어떤 태도로 사용하나요?',
     description:
       'AI 사용을 투명하고 윤리적으로, 책임감 있게 다루는 태도예요. 사용 사실을 밝히고 최종 결과에 책임지는 자세죠.',

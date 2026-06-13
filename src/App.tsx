@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import PhoneFrame from './components/PhoneFrame'
 import Landing from './components/Landing'
 import Quiz from './components/Quiz'
 import Result from './components/Result'
@@ -39,7 +40,7 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0)
     const shown = result?.type ?? (view === 'result' ? sharedType : null)
-    document.title = shown ? `${shown.emoji} ${shown.name} · ${BASE_TITLE}` : BASE_TITLE
+    document.title = shown ? `${shown.name} · ${BASE_TITLE}` : BASE_TITLE
   }, [view, result, sharedType])
 
   function handleStart() {
@@ -64,23 +65,24 @@ export default function App() {
     setView('landing')
   }
 
-  if (view === 'quiz') {
-    return <Quiz onComplete={handleComplete} onBack={handleRestart} />
+  function renderScreen() {
+    if (view === 'quiz') {
+      return <Quiz onComplete={handleComplete} onBack={handleRestart} />
+    }
+    if (view === 'result' && result) {
+      return (
+        <Result
+          type={result.type}
+          axisResults={result.axisResults}
+          onRestart={handleRestart}
+        />
+      )
+    }
+    if (view === 'result' && sharedType) {
+      return <Result type={sharedType} shared onRestart={handleStart} />
+    }
+    return <Landing onStart={handleStart} />
   }
 
-  if (view === 'result' && result) {
-    return (
-      <Result
-        type={result.type}
-        axisResults={result.axisResults}
-        onRestart={handleRestart}
-      />
-    )
-  }
-
-  if (view === 'result' && sharedType) {
-    return <Result type={sharedType} shared onRestart={handleStart} />
-  }
-
-  return <Landing onStart={handleStart} />
+  return <PhoneFrame>{renderScreen()}</PhoneFrame>
 }

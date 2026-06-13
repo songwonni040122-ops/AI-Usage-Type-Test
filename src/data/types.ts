@@ -8,7 +8,6 @@
 export interface AIType {
   /** 4글자 유형 코드 (예: 'DSVR') */
   code: string
-  emoji: string
   /** 유형 별명 (예: 'AI 총괄 디렉터') */
   name: string
   /** 한 줄 소개 */
@@ -34,7 +33,6 @@ export interface AIType {
 export const types: AIType[] = [
   {
     code: 'DSVR',
-    emoji: '🎯',
     name: 'AI 총괄 디렉터',
     tagline: '큰 그림은 맡기고 디테일은 직접 챙기는 올라운더',
     catchphrase: '맡길 땐 화끈하게, 확인할 땐 확실하게.',
@@ -62,7 +60,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DSVE',
-    emoji: '⚡',
     name: '스마트 자동화 엔지니어',
     tagline: '정교하게 설계하고 빠르게 굴리는 효율의 화신',
     catchphrase: '잘 만든 프롬프트 하나, 열 일 안 부럽다.',
@@ -89,7 +86,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DSTR',
-    emoji: '📐',
     name: '믿음직한 설계자',
     tagline: '정성껏 설계하고 결과를 신뢰하는 든든한 빌더',
     catchphrase: '제대로 부탁했으니, 결과도 믿어요.',
@@ -117,7 +113,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DSTE',
-    emoji: '🤖',
     name: '풀오토 자동화 마니아',
     tagline: '잘 세팅해두고 AI에게 맡겨 굴리는 자동화광',
     catchphrase: '한 번 세팅하면, 나머지는 AI가 알아서.',
@@ -144,7 +139,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DCVR',
-    emoji: '🧭',
     name: '대화형 탐험가',
     tagline: '대화로 길을 찾고 결과는 검증하는 탐험가',
     catchphrase: '일단 말 걸어보고, 답은 같이 찾아가요.',
@@ -171,7 +165,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DCVE',
-    emoji: '🚀',
     name: '빠른 실험가',
     tagline: '일단 해보고 빠르게 고치는 행동파',
     catchphrase: '고민은 짧게, 실험은 빠르게.',
@@ -198,7 +191,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DCTR',
-    emoji: '🤲',
     name: '느긋한 신뢰 파트너',
     tagline: '편하게 맡기고 믿되 책임은 지는 사람',
     catchphrase: '믿고 맡기되, 내 몫은 내가 져요.',
@@ -225,7 +217,6 @@ export const types: AIType[] = [
   },
   {
     code: 'DCTE',
-    emoji: '🌊',
     name: 'AI 올인 의존러',
     tagline: '거의 다 맡기고 흐름에 몸을 맡기는 사람',
     catchphrase: '어려운 건 AI에게, 나는 편하게.',
@@ -253,7 +244,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PSVR',
-    emoji: '🔬',
     name: '꼼꼼한 검증 장인',
     tagline: '직접 주도하며 끝까지 따져보는 완벽주의자',
     catchphrase: 'AI가 거들 뿐, 결론은 내가 검증해요.',
@@ -281,7 +271,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PSVE',
-    emoji: '🧪',
     name: '독립 연구자',
     tagline: '내 방식대로 설계하고 검증하는 자립형 연구자',
     catchphrase: '도구는 내가 고르고, 판단도 내가 해요.',
@@ -308,7 +297,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PSTR',
-    emoji: '🧱',
     name: '신중한 실무가',
     tagline: '직접 챙기고 정성껏 요청하는 안정형 실무가',
     catchphrase: '차근차근, 맡긴 만큼 책임져요.',
@@ -335,7 +323,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PSTE',
-    emoji: '🛠️',
     name: '실용주의 도구러',
     tagline: 'AI를 똑똑한 도구로 골라 쓰는 실용주의자',
     catchphrase: '필요할 때 딱, 깔끔하게 써요.',
@@ -362,7 +349,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PCVR',
-    emoji: '💬',
     name: '비판적 대화가',
     tagline: '주도적으로 대화하며 끝까지 의심하는 사람',
     catchphrase: '좋은 답일수록 한 번 더 물어봐요.',
@@ -390,7 +376,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PCVE',
-    emoji: '🎨',
     name: '감각파 크리에이터',
     tagline: '대화로 영감을 얻고 감각으로 빚는 창작자',
     catchphrase: 'AI는 브레인스토밍 파트너예요.',
@@ -417,7 +402,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PCTR',
-    emoji: '☕',
     name: '균형 잡힌 조력자',
     tagline: 'AI를 편한 동료처럼 곁에 두는 균형형',
     catchphrase: '적당히 맡기고, 적당히 챙겨요.',
@@ -444,7 +428,6 @@ export const types: AIType[] = [
   },
   {
     code: 'PCTE',
-    emoji: '🌱',
     name: '가벼운 입문 탐색러',
     tagline: '부담 없이 시작해 천천히 익혀가는 새싹',
     catchphrase: '아직은 가볍게, 하지만 분명히 성장 중.',
