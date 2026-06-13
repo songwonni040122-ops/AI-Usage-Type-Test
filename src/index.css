@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-toss-bg text-toss-ink font-sans antialiased;
+    /* 한글 줄바꿈을 자연스럽게 (어절 단위로 끊기) */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* 버튼 탭 시 회색 하이라이트 제거 (모바일) */
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 숫자/코드 가독성 */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  /* iOS 노치 안전영역 */
+  .safe-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  .safe-top {
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+  }
+}
