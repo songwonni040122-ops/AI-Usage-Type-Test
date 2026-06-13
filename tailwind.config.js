@@ -17,7 +17,7 @@ export default {
           sub: '#4E5968', // 보조 텍스트
           gray: '#8B95A1', // 흐린 텍스트
           line: '#E5E8EB', // 구분선
-          bg: '#F2F4F6', // 배경
+          bg: '#F2F4F6', // 폰 화면 안 배경
           card: '#FFFFFF',
         },
       },

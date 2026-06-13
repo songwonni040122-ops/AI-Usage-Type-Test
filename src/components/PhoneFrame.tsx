@@ -8,7 +8,7 @@ import StatusBar from './StatusBar'
  */
 export default function PhoneFrame({ children }: { children: ReactNode }) {
   return (
-    <div className="device:flex device:min-h-[100dvh] device:items-center device:justify-center device:bg-gradient-to-b device:from-[#e7ecf3] device:to-[#dbe3ef] device:p-5">
+    <div className="device:flex device:min-h-[100dvh] device:items-center device:justify-center device:bg-white device:p-5">
       {/* 단말기 본체 */}
       <div className="device:relative device:w-[392px] device:shrink-0 device:rounded-[46px] device:bg-[#0a0a0c] device:p-[11px] device:shadow-[0_40px_80px_-24px_rgba(20,28,46,0.55)] device:ring-1 device:ring-black/40">
         {/* 다이내믹 아일랜드 */}
