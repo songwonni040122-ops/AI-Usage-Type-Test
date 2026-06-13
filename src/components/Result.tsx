@@ -267,7 +267,7 @@ export default function Result({
           onClick={handleShare}
           className="flex-[1.4] rounded-2xl bg-toss-blue py-4 text-[16px] font-bold text-white shadow-btn transition active:scale-[0.98]"
         >
-          결과 공유하기
+          4D 훈련 신청하기
         </button>
       </div>
 
